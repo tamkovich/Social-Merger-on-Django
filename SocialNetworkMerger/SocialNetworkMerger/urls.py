@@ -10,4 +10,5 @@ urlpatterns = [
     path('home/', include('home.urls', namespace='home')),
     path('admin/', admin.site.urls),
     path('account/', include('accounts.urls', namespace='accounts')),
+    path('medialook/', include('foreignapi.urls', namespace='foreignapi'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
