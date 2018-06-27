@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+
+	<div class="col-md-8">
+		<h1>Look any media from VK and INSTAGRAM there</h1>
+        <hr>
+		<form method="get">
+			{% csrf_token %}
+            <input type="text" name="instagram_id" placeholder="instagram id">
+            <input type="text" name="vk_id" placeholder="vk id">
+			<br>
+			<button type="submit">Submit</button>
+		</form>
+        {% if images %}
+            <br>
+            <hr>
+            <h2>IMAGES</h2>
+            {% for image in images %}
+                <div class="container">
+                    <div class="col-sm-4">
+                        <img src="{{ image.image_url }}" alt="">
+                    </div>
+                </div>
+{#            <a href="{{ image.image_link }}"#}
+{#               target="_blank" style="background-image:url({{ image.image_url }});background-size: cover;"></a>#}
+            {% endfor %}
+        {% endif %}
+	</div>
+    <div class="col-md-4">
+        <h2>NOTHING YET</h2>
+    </div>
+</div>
+{% endblock %}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'accounts',
     'home',
+    'foreignapi',
 ]
 
 MIDDLEWARE = [
@@ -145,4 +146,7 @@ LOGIN_EXEMPT_URLS = [
 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
+
+instagram_access_token = '3505911430.49ad3d6.f8ef147b598f4b4586e4753d61e239aa'
+# #access_token=3505911430.49ad3d6.f8ef147b598f4b4586e4753d61e239aa
 
